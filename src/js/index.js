@@ -15,7 +15,7 @@ document.body.appendChild(renderer.domElement)
 
 const scene = new THREE.Scene()
 
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000)
+const camera = new THREE.PerspectiveCamera(70, window.innerWidth/window.innerHeight, 0.1, 1000)
 
 const orbit = new OrbitControls(camera, renderer.domElement)
 
@@ -25,7 +25,7 @@ orbit.update()
 
 scene.add(axesHelper)
 
-camera.position.set(0, 2, 5)
+camera.position.set(0, 10, 30)
 
 const cubeGeometry = new THREE.BoxGeometry(2, 2, 2)
 const cubeMaterial = new THREE.MeshBasicMaterial({color: 0x00FF00})
@@ -36,14 +36,23 @@ cube.position.y = 3
 
 const planeGeometry = new THREE.PlaneGeometry(30, 30)
 const planeMaterial = new THREE.MeshBasicMaterial({
-    color: 0xFFFFFF, side: THREE.DoubleSide
+    color: 0x668c8c, side: THREE.DoubleSide
 })
 const plane = new THREE.Mesh(planeGeometry, planeMaterial)
 scene.add(plane)
 plane.rotation.x = -0.5 * Math.PI
 
-const gridHelper = new THREE.GridHelper(30)
-scene.add(gridHelper)
+const verticalPlane = new THREE.PlaneGeometry(30, 30)
+const verticalPlaneMaterial = new THREE.MeshBasicMaterial({
+    color: 0x5f5f5f, side: THREE.DoubleSide
+})
+
+const planeVertical = new THREE.Mesh(verticalPlane, verticalPlaneMaterial)
+scene.add(planeVertical)
+planeVertical.position.set(0, 15, -15)
+
+// const gridHelper = new THREE.GridHelper(30)
+// scene.add(gridHelper)
 
 
 const sphereGeometry = new THREE.SphereGeometry(4, 50, 50)
