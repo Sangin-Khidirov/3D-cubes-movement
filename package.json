@@ -1,0 +1,25 @@
+{
+  "name": "3d-cubes-movement",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sangin-Khidirov/3D-cubes-movement.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sangin-Khidirov/3D-cubes-movement/issues"
+  },
+  "homepage": "https://github.com/Sangin-Khidirov/3D-cubes-movement#readme",
+  "dependencies": {
+    "dat.gui": "^0.7.9",
+    "parcel": "^2.7.0",
+    "three": "^0.143.0"
+  }
+}
